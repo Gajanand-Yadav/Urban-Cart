@@ -1,0 +1,137 @@
+.btn-orange,
+.btn-outline {
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-orange {
+  background: var(--primary-orange);
+  color: var(--on-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-orange:hover {
+  background: var(--primary-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-dark);
+}
+
+.section-title {
+  margin: 40px 0 18px;
+  font-size: 1.4rem;
+  border-left: 4px solid var(--primary-orange);
+  padding-left: 12px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-detail-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 30px 0 50px;
+}
+
+.product-gallery .main-image {
+  height: 420px;
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.product-gallery .main-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.product-rating-row img {
+  height: 18px;
+}
+
+.price-large {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-orange);
+  margin-bottom: 20px;
+}
+
+.product-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.product-options label {
+  width: 110px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.product-options select,
+.product-options input {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.action-buttons button {
+  flex: 1;
+  padding: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-buttons .btn-outline.is-active {
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+}
+
+@media (max-width: 900px) {
+  .product-detail-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

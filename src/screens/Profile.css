@@ -1,0 +1,343 @@
+.btn-orange,
+.btn-outline {
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-orange {
+  background: var(--primary-orange);
+  color: var(--on-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-orange:hover {
+  background: var(--primary-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-dark);
+}
+
+.page-title {
+  margin: 30px 0 20px;
+  font-size: 1.6rem;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 25px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.profile-sidebar {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.profile-identity {
+  padding: 28px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--on-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0 auto 12px;
+}
+
+.profile-name {
+  font-weight: 600;
+}
+
+.profile-email {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.profile-tabs {
+  padding: 10px 0;
+}
+
+.profile-tabs li button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  padding: 12px 20px;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.profile-tabs li button:hover {
+  background: var(--bg-light);
+}
+
+.profile-tabs li button.is-active {
+  background: var(--bg-light);
+  border-left-color: var(--primary-orange);
+  color: var(--primary-orange);
+  font-weight: 600;
+}
+
+.profile-content {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 25px;
+}
+
+.profile-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Orders */
+.order-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.order-id {
+  font-weight: 600;
+}
+
+.order-date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.order-status {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.order-status-delivered {
+  background: #e6f7ec;
+  color: #1d9a4d;
+}
+
+.order-status-cancelled {
+  background: #fdeaea;
+  color: #d9534f;
+}
+
+[data-theme='dark'] .order-status-delivered {
+  background: rgba(29, 154, 77, 0.18);
+  color: #4ade80;
+}
+
+[data-theme='dark'] .order-status-cancelled {
+  background: rgba(217, 83, 79, 0.18);
+  color: #f87171;
+}
+
+.order-items {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.order-item-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Addresses / Payment methods */
+.info-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 18px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.info-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.info-card-label {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.default-badge {
+  background: var(--bg-light);
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+
+.info-card-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.info-card-actions button {
+  background: none;
+  border: none;
+  color: var(--primary-orange);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.info-card-actions button:hover {
+  text-decoration: underline;
+}
+
+.add-new-btn {
+  align-self: flex-start;
+}
+
+/* Account details form */
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+}
+
+.account-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.account-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.account-form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.logout-btn {
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  padding: 14px 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #d9534f;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.logout-btn:hover {
+  background: #fdeaea;
+}
+
+[data-theme='dark'] .logout-btn:hover {
+  background: rgba(217, 83, 79, 0.16);
+}
+
+.profile-signed-out {
+  text-align: center;
+  padding: 60px 30px;
+  margin-bottom: 60px;
+}
+
+.signed-out-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.signed-out-text {
+  color: var(--text-muted);
+  max-width: 420px;
+  margin: 0 auto 24px;
+}
+
+.signed-out-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .account-form-row {
+    grid-template-columns: 1fr;
+  }
+}

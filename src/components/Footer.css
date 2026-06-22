@@ -1,0 +1,33 @@
+.main-footer {
+  background: var(--navy);
+  color: #ccc;
+  margin-top: auto;
+  padding: 45px 24px 20px;
+  width: 100%;
+}
+
+.footer-grid {
+  max-width: 1480px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.footer-col h4 {
+  color: var(--on-dark);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.footer-col li {
+  padding: 6px 0;
+  font-size: 0.88rem;
+  color: #aab2bf;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

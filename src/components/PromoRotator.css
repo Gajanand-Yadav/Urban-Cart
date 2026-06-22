@@ -1,0 +1,53 @@
+.promo-card {
+  position: relative;
+  height: 170px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+}
+
+.promo-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.9s ease, transform 6s ease;
+  transform: scale(1.02);
+}
+
+.promo-card-img.is-active {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.promo-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 65%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  color: var(--on-dark);
+}
+
+.promo-card-label {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.promo-card-cta {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 4px;
+}
