@@ -1,3 +1,4 @@
+
 .btn-orange {
   display: inline-block;
   border: none;
@@ -97,6 +98,25 @@
 @media (max-width: 900px) {
   .hero-section {
     grid-template-columns: 1fr;
+  }
+
+  /* Banner: drop the fixed height and use the image's natural 5:2 ratio
+     so it scales with screen width â€” no more square-box cropping. */
+  .main-banner {
+    min-height: unset;
+    aspect-ratio: 5 / 2;
+    width: 100%;
+  }
+
+  /* Show side-banner cards side by side so they don't eat vertical space */
+  .side-banners {
+    flex-direction: row;
+    height: 140px;
+  }
+
+  .side-banner-card {
+    min-height: unset;
+    height: 100%;
   }
 
   .promo-row {
